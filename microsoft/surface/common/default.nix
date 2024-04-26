@@ -3,14 +3,15 @@
 let
   inherit (lib) mkDefault;
 
-in {
+in
+{
   imports = [
     ./kernel
     ./ipts
     ./surface-control
   ];
 
-  microsoft-surface.kernelVersion = mkDefault "6.6";
+  microsoft-surface.kernelVersion = mkDefault "6.7";
 
   # Seems to be required to properly enable S0ix "Modern Standby":
   boot.kernelParams = mkDefault [ "mem_sleep_default=deep" ];

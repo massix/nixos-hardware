@@ -7,18 +7,19 @@ let
 
   cfg = config.microsoft-surface;
 
-  version = "6.8.6";
+  version = "6.7.9";
   kernelPatches = surfacePatches {
     inherit version;
     patchFn = ./patches.nix;
   };
   kernelPackages = linuxPackage {
     inherit version kernelPatches;
-    sha256 = "sha256-nnIyMtYDq0Xr8EPDRxTEjyd6sZXCmry4Ry8qTDpaGZU=";
-    ignoreConfigErrors=true;
+    sha256 = "sha256-D9cz/Ad4+Nof32bfFpjTlCSIB95x7vg6TRIYvLPf00Y=";
+    ignoreConfigErrors = true;
   };
 
-in {
+in
+{
   options.microsoft-surface.kernelVersion = mkOption {
     type = versionsOfEnum version;
   };

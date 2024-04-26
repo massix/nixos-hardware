@@ -1,7 +1,7 @@
-{ lib,
-  kernel ? lib.kernel,
-  patchSrc,
-  version,
+{ lib
+, kernel ? lib.kernel
+, patchSrc
+, version
 }:
 
 [

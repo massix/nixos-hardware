@@ -3,9 +3,10 @@
 let
   inherit (lib) mkOption types;
 
-in {
+in
+{
   imports = [
-    ./linux-6.8.x
+    ./linux-6.7.x
   ];
 
   options.microsoft-surface.kernelVersion = mkOption {
